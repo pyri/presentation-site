@@ -7,4 +7,5 @@
 						<?php echo $article->article; ?>					
 					</p>	
 					<?endforeach;?>
+
 				</div>

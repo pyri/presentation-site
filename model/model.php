@@ -3,13 +3,6 @@ require_once("database.php");
 
 class Model
 {
-/*    function __construct($title, $description, $author, $image)
-    {
-        $this->title = $title;
-        $this->description = $description;
-        $this->author = $author;
-		$this->image = $image;
-    }*/
 	
 	static function readMainPage(){
 		$result = Database::query("SELECT * FROM main");
@@ -42,12 +35,50 @@ class Model
 	}
 	
 	static function readComment(){
-		$result = Database::query("SELECT * FROM comment");
+		$result = Database::query("SELECT max(id) as maxId FROM comment");		
+		$maxId = array();
+		
+		while ($obj = $result->fetch_object()) {
+            $maxId[$obj->id] = $obj;
+        }
+		
+		foreach($maxId as $item){
+			$maximId = $item->maxId;
+		}		
+				
+		if(isset($_GET['num'])) {
+			$number_pageopen = $_GET['num'] - 1;
+		}
+		else {
+			$number_pageopen = 0;
+		}
+		
+		$idFirst = $maximId-$number_pageopen*3;
+		$idSecond = $idFirst - 1;
+		$idLast = $idFirst - 2;
+				
+		$result2 = Database::query("SELECT * FROM comment WHERE id IN ('$idFirst', '$idSecond', '$idLast') ORDER BY id desc");
         $comment = array();
-
-        while ($obj = $result->fetch_object()) {
+				
+        while ($obj = $result2->fetch_object()) {
             $comment[$obj->id] = $obj;
         }
         return $comment;
 	}
+	
+	static function countComments(){
+		$result = Database::query("SELECT count(id) as countFromDB FROM comment");
+        $count = array();
+		
+        while ($obj = $result->fetch_object()) {
+            $count[$obj->id] = $obj;
+        }
+		
+		foreach($count as $item){
+			$countComments = $item->countFromDB;
+		}	
+				
+        return $countComments;
+	}
+	
 }?>

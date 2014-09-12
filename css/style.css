@@ -203,6 +203,9 @@ header ul li{
 	padding: 6px 40px 6px 25px;
 }
 
+.msg_error{
+	color: red;
+}
 
 #msg-name, #msg-date{
 	padding: 0;

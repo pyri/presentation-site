@@ -27,7 +27,7 @@
 				<?php Route::renderContent();?>
 			</div>	
 		</div>
+		<script src="http://code.jquery.com/jquery-2.1.1.js"></script>
 		<script type="text/javascript" src="js/comment.js"></script>
-		<script type="text/javascript" src="js/JsHttpRequest.js"></script>		
 	</body>
 </html>
