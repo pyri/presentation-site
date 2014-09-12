@@ -1,0 +1,220 @@
+*{
+	margin: 0;
+	padding: 0;
+	color: #ddd;
+}
+
+html, body, .wrapper{
+	height: 100%;
+}
+
+body{ 
+	background-image: url(/img/bg.png);			
+}
+
+header{	
+	margin-top: 60px;
+	height: 30px;
+}
+
+ul{
+	list-style-type: none;
+}
+
+ul li{
+	height: 20px;
+	width: auto;
+}
+
+a{	
+	text-decoration: none;
+}
+
+a:hover{
+	color: #0F0;
+}
+
+table{
+	padding-left: 15px;
+	padding-bottom: 15px;
+}
+
+table tr th, table tr td{
+	padding: 7px;
+}
+
+input{
+	margin: 15px 0;
+	width: 305px;
+	height:25px;
+}
+
+textarea{
+	margin: 10px 0;
+	width: 290px;
+	height: 170px;
+}
+
+input, textarea{
+	padding-left: 10px;
+}
+
+header ul li{	
+	padding: 5px 10px;
+}
+
+.inline-left{
+	float: left;
+}
+
+.inline-right{
+	float: right;
+}
+
+.border{
+	box-shadow:  0 0 7px #ccc;
+}
+
+.border-solid{
+	border: 1px solid #ddd;
+}
+
+.partition-solid{
+	border-right: 1px solid #ccc;
+}
+
+.partition-dashed{
+	border-bottom: 1px dashed #aaa;
+}
+
+.margin-headerli{
+	margin-left: 60px;
+}
+
+.table-border{
+	border: 1px solid #fff; 	
+}
+
+.font-tnr, p{
+	font: 1em Times New Roman;
+}
+
+.font-arial{
+	font: 1em Arial;
+}
+
+.font-vernara{
+	font: 1.1em Vernara;
+}
+
+.font-black{
+	font: 1.1em Vernara;
+	color: black;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.content{
+	width: 1228px;
+	height: 100%;
+	margin: 0;
+	padding: 0 15px;
+}
+
+.content h2, .content h3{
+	font: 1em Arial;
+}
+
+.content h2{
+	padding: 15px 0 15px 15px;
+}
+
+.content h3{
+	padding: 15px 0 20px 15px;
+}
+
+.content p{
+	padding: 10px 0;
+	letter-spacing: 1px;	
+}
+
+.form{
+	margin: 0 5px;
+	padding-top: 15px;
+	width: 334px;
+	height: 520px;
+}
+
+.form h2{
+	padding: 0px;	
+}
+
+.desk{
+	height:500px;
+	width: 55%;
+	margin: 13px 3px 13px 0;
+}
+
+.msg{
+	margin: 10px 5px;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+
+.msg-pagenumber{
+	width: 10px;
+	height: 20px;
+	padding: 0 5px;
+	margin-right: 5px;
+}
+
+.btn{	
+	width: 110px;
+	height: 25px;
+	color: black;
+	margin-right:15px;
+	padding-left: 5px;
+}
+.font-green{
+	color: #aca;
+}
+
+.inflow-left{
+	clear: left;	
+}
+
+.wrapper{
+	width: 1536px;
+	margin: 0 auto;
+}
+
+.main{
+	margin-top: 10px;
+}
+
+.sidebar-right{
+	margin-top: 20px;
+	float: right;
+}
+
+.sidebar-right ul li{
+	padding: 6px 40px 6px 25px;
+}
+
+
+#msg-name, #msg-date{
+	padding: 0;
+}
+
+#msg-text{
+	padding: 8px 0 0 0;
+}
+
+#padding-more{
+	padding-bottom: 30px;
+}
+
+
+
