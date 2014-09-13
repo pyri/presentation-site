@@ -2,7 +2,9 @@
 	$countComments = Model::countComments();?>
 			
 				<div class="content border">				
-					<div id="error"></div>					
+					<div id="error">
+						
+					</div>					
 					<div class="desk inline-right">
 						<div id="comment"></div>
 							

@@ -75,6 +75,14 @@ header ul li{
 	box-shadow:  0 0 7px #ccc;
 }
 
+.visible{
+	display: block;
+}
+
+.unvisible{
+	display: none;
+}
+
 .border-solid{
 	border: 1px solid #ddd;
 }

@@ -34,7 +34,7 @@ class Model
         return $work;
 	}
 	
-	static function readComment(){
+static function readComment(){
 		$result = Database::query("SELECT max(id) as maxId FROM comment");		
 		$maxId = array();
 		
@@ -48,18 +48,19 @@ class Model
 				
 		if(isset($_GET['num'])) {
 			$number_pageopen = $_GET['num'] - 1;
-		}
-		else {
-			$number_pageopen = 0;
+			$out = $number_pageopen*3;	
 		}
 		
-		$idFirst = $maximId-$number_pageopen*3;
-		$idSecond = $idFirst - 1;
-		$idLast = $idFirst - 2;
+		//$idFirst = $maximId-$number_pageopen*3;
 				
-		$result2 = Database::query("SELECT * FROM comment WHERE id IN ('$idFirst', '$idSecond', '$idLast') ORDER BY id desc");
+		if(empty($out)){
+			$result2 = Database::query("SELECT * FROM comment ORDER BY id desc LIMIT 3");
+		}		
+		else{
+			$result2 = Database::query("SELECT * FROM comment ORDER BY id desc LIMIT '$out', 3");
+		}
         $comment = array();
-				
+		//print_r($result2);
         while ($obj = $result2->fetch_object()) {
             $comment[$obj->id] = $obj;
         }

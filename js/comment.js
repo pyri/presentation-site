@@ -16,9 +16,9 @@ $(document).ready(function() {
 			var result = JSON.parse(data);
 						
 			if (result.status == 'error') {
-				text.addClass("new error");
-				$('#error').append('<p class="msg_error">'+ result.message +'</p>');
-				$('#error').hide(7000);
+				text.addClass("new error");				
+				$('.msg_error').css({"visibility": "hidden";});
+				$('#error').append('<p id="msg_error">'+ result.message +'</p>');				
 			}
 			else {	
 				var comment = $("#comment");
@@ -27,7 +27,7 @@ $(document).ready(function() {
 						'<p id="msg-name" class="inline-left partition-dashed">'+ result.author +' ('+ result.mail +')'+"</p>"+
 						'<p id="msg-text" class="inflow-left font-green">'+ result.text +"</p>"+
 					'</div>';
-				comment.append(html);				
+				comment.prepend(html);				
 			}
 		}).error(function() {
 			console.log("new error");
