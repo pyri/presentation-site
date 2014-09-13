@@ -51,16 +51,14 @@ static function readComment(){
 			$out = $number_pageopen*3;	
 		}
 		
-		//$idFirst = $maximId-$number_pageopen*3;
-				
 		if(empty($out)){
 			$result2 = Database::query("SELECT * FROM comment ORDER BY id desc LIMIT 3");
 		}		
 		else{
-			$result2 = Database::query("SELECT * FROM comment ORDER BY id desc LIMIT '$out', 3");
+			$result2 = Database::query("SELECT * FROM comment ORDER BY id desc LIMIT $out, 3");
 		}
         $comment = array();
-		//print_r($result2);
+		
         while ($obj = $result2->fetch_object()) {
             $comment[$obj->id] = $obj;
         }
