@@ -27,9 +27,9 @@ $(document).ready(function () {
             else {
                 var comment = $("#comment");
                 var html = '<div class="msg border">' +
-                    '<p id="msg-date" class="inline-right partition-dashed">' + result.date + "</p>" +
-                    '<p id="msg-name" class="inline-left partition-dashed">' + result.author + ' (' + result.mail + ')' + "</p>" +
-                    '<p id="msg-text" class="inflow-left font-green">' + result.text + "</p>" +
+                    '<p class="inline-right partition-dashed">' + result.date + "</p>" +
+                    '<p class="inline-left partition-dashed">' + result.author + ' (' + result.mail + ')' + "</p>" +
+                    '<p class="msg-text inflow-left font-green">' + result.text + "</p>" +
                     '</div>';
                 comment.prepend(html);
             }

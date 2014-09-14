@@ -4,7 +4,7 @@ class Database
 {
     static function query($query)
     {
-        $mysqli = new mysqli("localhost", "visitka", "visitka", "presentation_site");
+        $mysqli = new mysqli("localhost", "presentation", "presentation", "presentation_site");
 
         if ($mysqli->connect_errno) {
             printf("Error connect database: %s\n", $mysqli->connect_error);
