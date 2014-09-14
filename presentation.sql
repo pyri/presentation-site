@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Сен 14 2014 г., 15:56
+-- Время создания: Сен 15 2014 г., 01:21
 -- Версия сервера: 5.5.35-log
 -- Версия PHP: 5.3.27
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- База данных: `presentation_site`
+-- База данных: `presentation`
 --
 
 -- --------------------------------------------------------
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `comments` (
   `text` text NOT NULL,
   `data` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=94 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=123 ;
 
 --
 -- Дамп данных таблицы `comments`
@@ -50,20 +50,9 @@ INSERT INTO `comments` (`id`, `name`, `mail`, `text`, `data`) VALUES
 (77, 'Кира', 'kira@gmail.com', 'Отличный фон!', '2014-09-13'),
 (78, 'Евгений', 'jeka@mail.ru', 'Есть вопрос..', '2014-09-13'),
 (79, 'Дарья', 'darya@ya.ru', 'Как дела?', '2014-09-13'),
-(80, 'Дарья Морозова', 'darya@ya.ru', 'Как дела, а?', '2014-09-13'),
-(81, 'jgh', 'jghjghj@sg.er', 'ghjgh', '2014-09-14'),
-(82, 'fgdg', 'dfgdf@asfa.rrt', 'gdfg', '2014-09-14'),
-(83, 'hjkh', 'hjkh@fad.rt', 'jkhk', '2014-09-14'),
-(84, 'jfgj', 'dfgdf@asfa.rrt', 'fjfgj', '2014-09-14'),
-(85, 'jfgj', 'dfgdf@asfa.rrt', 'fjfgj|', '2014-09-14'),
-(86, 'jfgj', 'dfgdf@asfa.rrt', 'fjfgj|', '2014-09-14'),
-(87, 'jfgj', 'dfgdf@asfa.rrt', 'fjfgj|||', '2014-09-14'),
-(88, 'HJL', 'HLLHL@ffs.rt', 'HLHLHL', '2014-09-14'),
-(89, 'uyi', 'yiyui@fsdf.rt', 'yuiyuiyui', '2014-09-14'),
-(90, 'uyi', 'yiyui@fsdf.rt', 'yuiyuiyui', '2014-09-14'),
-(91, 'uyi453453', 'yiyui@fsdf.rt', 'yuiyuiyui', '2014-09-14'),
-(92, 'джлдж', 'fghfh@gdfg.yt', 'джлд', '2014-09-14'),
-(93, 'джлдж', 'fghfh@gdfg.yt', 'джлд', '2014-09-14');
+(120, 'jlkjk', 'jkljk@gdf.rt', 'ljkljkl', '2014-09-15'),
+(121, 'ghjgj', 'ghj@fsr.rt', 'gjghj', '2014-09-15'),
+(122, 'tu', 'tyu@fd.tr', 'utyu', '2014-09-15');
 
 -- --------------------------------------------------------
 
