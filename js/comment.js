@@ -16,13 +16,8 @@ $(document).ready(function () {
             var result = JSON.parse(data);
 
             if (result.status == 'error') {
-                text.addClass("new error");
-                //$('.error_block').css({"display": "none";});
-                //var resultStat = "'<p>'+ result.message +'</p>'";
-
+                text.addClass("error");
                 $('.error_block').text(result.message).show().delay(1500).fadeOut(800);
-
-                //$('.error_block').append('<p>'+ result.message +'</p>');
             }
             else {
                 var comment = $("#comment");
@@ -32,9 +27,13 @@ $(document).ready(function () {
                     '<p class="msg-text inflow-left font-green">' + result.text + "</p>" +
                     '</div>';
                 comment.prepend(html);
+                $('.element-form').val('');
+               // $('.element-form').attr("disabled",true);
+               // $('.btn').attr("disabled",true);
+
             }
         }).error(function () {
-            console.log("new error");
+            console.log("error");
         });
 
         return false;

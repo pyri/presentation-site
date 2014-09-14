@@ -10,6 +10,7 @@ html, body, .wrapper {
 
 body {
     background-image: url(/img/bg.png);
+    font: 13pt Arial;
 }
 
 header {
@@ -51,7 +52,7 @@ input {
 
 textarea {
     margin: 10px 0;
-    width: 290px;
+    width: 305px;
     height: 170px;
 }
 
@@ -104,19 +105,19 @@ header ul li {
 }
 
 .font-tnr, p {
-    font: 1em Times New Roman;
+    font: 13pt Times New Roman;
 }
 
 .font-arial {
-    font: 1em Arial;
+    font: 13pt Arial;
 }
 
 .font-vernara {
-    font: 1.1em Vernara;
+    font: 13pt Vernara;
 }
 
 .font-black {
-    font: 1.1em Vernara;
+    font: 13pt Vernara;
     color: #000;
 }
 
@@ -132,7 +133,7 @@ header ul li {
 }
 
 .content h2, .content h3 {
-    font: 1em Arial;
+    font: 13pt Arial;
 }
 
 .content h2 {
@@ -171,10 +172,10 @@ header ul li {
 }
 
 .msg-pagenumber {
-    width: 10px;
+    width: 22px;
     height: 20px;
-    padding: 0 5px;
     margin-right: 5px;
+    text-align: center;
 }
 
 .btn {

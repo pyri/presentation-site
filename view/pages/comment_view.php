@@ -43,7 +43,7 @@ $countComments = Model::countComments();?>
                    class="font-vernara font-black">
 
             <h2>Ваше сообщение</h2>
-            <textarea id="text" name="text" placeholder="Текст сообщения" class="font-vernara font-black"></textarea>
+            <textarea id="text" name="text" placeholder="Текст сообщения" class="element-form font-vernara font-black"></textarea>
 
             <input type="submit" id="send" class="btn inline-right font-vernara" name="send" value="Отправить"/>
 
