@@ -17,7 +17,7 @@ $(document).ready(function () {
 
             if (result.status == 'error') {
                 text.addClass("error");
-                $('.error_block').text(result.message).show().delay(1500).fadeOut(800);
+                $('.error_block').text(result.message).reset();
             }
             else {
                 var comment = $("#comment");
@@ -28,13 +28,12 @@ $(document).ready(function () {
                     '</div>';
                 comment.prepend(html);
                 $('.element-form').val('');
-               // $('.element-form').attr("disabled",true);
-               // $('.btn').attr("disabled",true);
+                $('.element-form').attr("disabled",true);
+                $('.btn').attr("disabled",true);
+                $('.error_block').text('').reset();
 
             }
-        }).error(function () {
-            console.log("error");
-        });
+        }).error();
 
         return false;
     });

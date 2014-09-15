@@ -31,6 +31,7 @@ if (!isset($data['status'])) {
     $data['mail'] = $mail;
     $data['date'] = $date;
     $data['text'] = $text;
+    $message = 'Ваш комментарий добавлен. ';
 }
 $data['message'] = $message;
 echo json_encode($data);

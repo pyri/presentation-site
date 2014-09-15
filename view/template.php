@@ -2,16 +2,16 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Арекаев А. - тестовое задание</title>
+    <title>Кипайкина К. - тестовое задание</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 <div class="wrapper">
     <header class="border">
         <ul>
-            <li class="inline-left partition-solid margin-headerli"><a href="/">Главная</a></li>
-            <li class="inline-left partition-solid"><a href="/?page=about_me">Обо мне</a></li>
-            <li class="inline-left"><a href="/?page=comment">Комментарии</a></li>
+            <li class="headerli-first"><a href="/">Главная</a></li>
+            <li class="headerli-second"><a href="/?page=about_me">Обо мне</a></li>
+            <li class="headerli-third"><a href="/?page=comment">Комментарии</a></li>
         </ul>
     </header>
 

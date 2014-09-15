@@ -36,11 +36,11 @@ $countComments = Model::countComments();?>
     <div class="form">
         <form id="main-form" method="POST">
             <h2>Имя</h2>
-            <input type="text" id="author" placeholder="Введите свое имя" name="author" class="font-vernara font-black">
+            <input type="text" id="author" placeholder="Введите свое имя" name="author" class="element-form font-vernara font-black">
 
             <h2>Адрес электронной почты</h2>
             <input type="text" id="mail" placeholder="Укажите свой e-mail" name="e-mail"
-                   class="font-vernara font-black">
+                   class="element-form font-vernara font-black">
 
             <h2>Ваше сообщение</h2>
             <textarea id="text" name="text" placeholder="Текст сообщения" class="element-form font-vernara font-black"></textarea>

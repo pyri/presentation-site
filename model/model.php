@@ -3,9 +3,10 @@ require_once("database.php");
 
 class Model
 {
+
     static function readMainPage()
     {
-        $result = Database::query("SELECT * FROM pages");
+        $result = Database::query("SELECT * FROM main");
         $articles = array();
 
         while ($obj = $result->fetch_object()) {
@@ -16,7 +17,7 @@ class Model
 
     static function readPersonInfo()
     {
-        $result = Database::query("SELECT * FROM pages");
+        $result = Database::query("SELECT * FROM about");
         $person = array();
 
         while ($obj = $result->fetch_object()) {
@@ -27,7 +28,7 @@ class Model
 
     static function readWork()
     {
-        $result = Database::query("SELECT * FROM pages");
+        $result = Database::query("SELECT * FROM about");
         $work = array();
 
         while ($obj = $result->fetch_object()) {
