@@ -1,5 +1,7 @@
-﻿<?php $comments = Model::readComment();
-$countComments = Model::countComments();?>
+﻿<?php
+    $comments = Model::readComment();
+    $countComments = Model::countComments();
+?>
 
 <div class="content border">
     <div>
@@ -8,8 +10,10 @@ $countComments = Model::countComments();?>
     <div class="desk inline-right">
         <div id="comment"></div>
 
+        <?php $i=0;?>
         <?php foreach ($comments as $comment): ?>
-            <div class="msg border">
+            <?php $i++;?>
+            <div id='msg-<?php echo $i;?>' class="msg border">
                 <p class="inline-right partition-dashed"><?php echo $comment->data; ?></p>
 
                 <p class="inline-left partition-dashed"><?php echo $comment->name . " (" . $comment->mail . ")"; ?></p>
@@ -35,18 +39,21 @@ $countComments = Model::countComments();?>
 
     <div class="form">
         <form id="main-form" method="POST">
-            <h2>Имя</h2>
+            <label for="author">Имя</label>
             <input type="text" id="author" placeholder="Введите свое имя" name="author" class="element-form font-vernara font-black">
 
-            <h2>Адрес электронной почты</h2>
+            <label for="mail">Адрес электронной почты</label>
             <input type="text" id="mail" placeholder="Укажите свой e-mail" name="e-mail"
                    class="element-form font-vernara font-black">
 
-            <h2>Ваше сообщение</h2>
+            <label for="text">Ваше сообщение</label>
             <textarea id="text" name="text" placeholder="Текст сообщения" class="element-form font-vernara font-black"></textarea>
 
-            <input type="submit" id="send" class="btn inline-right font-vernara" name="send" value="Отправить"/>
+            <label for="captcha">Введите код с картинки:</label>
+            <img src="/kcaptcha/index.php" alt="Текст с картинки"/>
+            <input id="captcha" type="text" name="captcha" placeholder="Код с картинки" class="element-form font-vernara font-black"" />
 
-            <form>
+            <input type="submit" id="send" class="btn font-vernara" name="send" value="Отправить"/>
+        <form>
     </div>
 </div>

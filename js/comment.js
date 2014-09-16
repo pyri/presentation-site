@@ -3,12 +3,14 @@ $(document).ready(function () {
         var author = $("#author");
         var mail = $("#mail");
         var text = $("#text");
+        var captcha = $("#captcha");
 
         $.ajax({
             data: {
                 author: author.val(),
                 mail: mail.val(),
-                text: text.val()
+                text: text.val(),
+                captcha: captcha.val()
             },
             url: "comment.php",
             method: "POST"
@@ -17,7 +19,10 @@ $(document).ready(function () {
 
             if (result.status == 'error') {
                 text.addClass("error");
-                $('.error_block').text(result.message).reset();
+                $('.error_block').text(result.message).reset;
+                if(result.type_error == 'captcha'){
+                    $('#captcha').val('');
+                }
             }
             else {
                 var comment = $("#comment");
@@ -27,10 +32,12 @@ $(document).ready(function () {
                     '<p class="msg-text inflow-left font-green">' + result.text + "</p>" +
                     '</div>';
                 comment.prepend(html);
+                $('.msg:gt(2)').slideUp(2000);
                 $('.element-form').val('');
-                $('.element-form').attr("disabled",true);
-                $('.btn').attr("disabled",true);
-                $('.error_block').text('').reset();
+                /*$('.element-form').attr("disabled",true);
+                $('.btn').attr("disabled",true);*/
+
+                $('.error_block').text('').reset;
 
             }
         }).error();

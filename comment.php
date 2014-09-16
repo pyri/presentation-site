@@ -1,16 +1,30 @@
 <?php
-require_once("database.php");
+session_start();
 
+require_once("database.php");
 $author = ($_POST['author']);
 $mail = ($_POST['mail']);
 $text = ($_POST['text']);
+$captcha = ($_POST['captcha']);
 
 $data = array();
 $message = '';
 
-if (empty($author) or empty($mail) or empty($text)) {
+$checkCaptcha = false;
+if(isset($_SESSION['captcha_keystring']) && $_SESSION['captcha_keystring'] === $captcha)
+{
+    $checkCaptcha = true;
+}
+
+if (!$checkCaptcha  && !empty($captcha)) {
     $data['status'] = 'error';
-    $message = 'Заполните все поля. ';
+    $message = 'Код введен неверно. ';
+    $data['type_error'] = 'captcha';
+}
+
+if (empty($author) or empty($mail) or empty($text) or empty($captcha)) {
+    $data['status'] = 'error';
+    $message = $message .'Заполните все поля. ';
 }
 
 if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
@@ -35,4 +49,3 @@ if (!isset($data['status'])) {
 }
 $data['message'] = $message;
 echo json_encode($data);
-?>
