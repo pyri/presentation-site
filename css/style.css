@@ -1,241 +1,98 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    background-image: url(/img/bg.png);
-    font: 17px Arial;
-    color: #ddd;
+  background-color: #add8ed;
 }
-
-header {
-    margin-top: 60px;
-    height: 30px;
-}
-
 ul {
-    list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-
 ul li {
-    height: 20px;
-    width: auto;
+  list-style-type: none;
 }
-
-a {
-    text-decoration: none;
-    color: #ddd;
+p {
+  margin: 0;
 }
-
-a:hover {
-    color: #0F0;
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
-
-table {
-    padding-left: 15px;
-    padding-bottom: 15px;
+#wrapper {
+  width: 948px;
+  margin: 0 auto;
+  background-color: #fff;
 }
-
-table tr th, table tr td {
-    padding: 7px;
+#main {
+  margin-top: 36px;
 }
-
-input {
-    margin: 15px 0;
-    width: 305px;
-    height: 25px;
+/*HEADER*/
+header {
+  height: 101px;
 }
-
-textarea {
-    margin: 10px 0;
-    width: 305px;
-    height: 170px;
+.logo {
+  height: 44px;
+  width: 213px;
+  float: left;
+  margin-left: 3px;
+  overflow: hidden;
+  padding-top: 17px;
 }
-
-input, textarea {
-    padding-left: 10px;
+.dotted_line {
+  margin-top: 24px;
+  margin-left: 28px;
+  float: left;
 }
-
-header ul li {
-    padding: 5px 10px;
+.slogan {
+  margin-left: 30px;
+  color: #bbbbbb;
+  font: bold 14px Arial;
+  margin-top: 32px;
+  float: left;
 }
-
-img{
-    padding-top: 10px;
+.auth {
+  margin-right: 23px;
+  color: #bbbbbb;
+  font: bold 14px Regular;
+  margin-top: 30px;
+  float: right;
 }
-
-.headerli-first{
-    margin-left: 60px;
+/*MAIN MENU*/
+#mainmenu {
+  height: 53px;
 }
-
-.headerli-first, .headerli-second{
-    border-right: 1px solid #ccc;
+#mainmenu ul {
+  height: 100%;
 }
-
-.headerli-first, .headerli-second, .headerli-third{
-    float: left;
+#mainmenu ul li {
+  width: 131px;
+  height: 38px;
+  margin-left: 5px;
+  padding-top: 15px;
+  float: left;
+  text-align: center;
+  border-radius: 7px;
+  background: linear-gradient(to bottom, #f6f6f6, #d6d6d6);
+  font: 18px Arial;
 }
-
-.inline-left {
-    float: left;
+#mainmenu ul li:first-child {
+  margin-left: 0;
 }
-
-.inline-right {
-    float: right;
+#mainmenu ul .active_li {
+  background: #3366CC;
 }
-
-.border {
-    box-shadow: 0 0 7px #ccc;
+#mainmenu ul li a {
+  color: #666;
+  text-decoration: none;
 }
-
-.visible {
-    display: block;
+#mainmenu ul li .active_a {
+  color: #FFFEFE;
+  text-decoration: none;
 }
-
-.unvisible {
-    display: none;
+.active {
+  color: #FFFEFE;
+  background-color: #3366CC;
 }
-
-.border-solid {
-    border: 1px solid #ddd;
-}
-
-.partition-solid {
-    border-right: 1px solid #ccc;
-}
-
-.partition-dashed {
-    border-bottom: 1px dashed #aaa;
-}
-
-.table-border {
-    border: 1px solid #fff;
-}
-
-.font-tnr, p {
-    font: 17px Times New Roman;
-}
-
-.font-arial {
-    font: 17px Arial;
-}
-
-
-
-.bold {
-    font-weight: bold;
-}
-
-.content {
-    width: 1228px;
-    margin: 0;
-    padding: 0 15px;
-}
-
-.content h2, .content h3 {
-    font: 17px Arial;
-}
-
-.content h2 {
-    padding: 15px 0 15px 15px;
-}
-
-.content h3 {
-    padding: 15px 0 20px 15px;
-}
-
-.content p {
-    padding: 10px 0;
-    letter-spacing: 1px;
-}
-
-.form {
-    margin: 0 5px;
-    width: 334px;
-}
-
-.element-form{
-    font: 17px Vernara;
-    color: #000;
-}
-
-label {
-    padding: 0px;
-}
-
-.desk {
-    width: 55%;
-    margin: 13px 3px 13px 0;
-}
-
-.msg {
-    margin: 10px 5px;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-.msg-pagenumber {
-    width: 22px;
-    height: 20px;
-    margin-right: 5px;
-    text-align: center;
-}
-
-.btn {
-    width: 110px;
-    height: 25px;
-    color: #000;
-    padding-left: 5px;
-    margin-left: 207px;
-    font: 17px Vernara;
-}
-
-.font-green {
-    color: #aca;
-}
-
-.inflow-left {
-    clear: left;
-}
-
-.wrapper {
-    width: 1536px;
-    margin: 0 auto;
-}
-
-.main {
-    margin-top: 10px;
-}
-
-.sidebar-right {
-    margin-top: 20px;
-    float: right;
-}
-
-.sidebar-right ul li {
-    padding: 6px 40px 6px 25px;
-}
-
-.error_block {
-    color: #FF7373;
-}
-
-.success_block {
-    color: #aca;
-}
-
-.msg p {
-    padding: 0;
-}
-
-.msg-text {
-    margin-top: 30px;
-}
-
-#padding-more {
-    padding-bottom: 30px;
-}
-
-
-
+/**/
+/*SIDEBAR RIGHT*/
+/*FOOTER*/
