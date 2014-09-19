@@ -1,5 +1,5 @@
 ﻿<?php $articles = Model::readMainPage(); ?>
-<div class="content border">
+<div class="content">
     <img src="../img/slider.png" alt="Картинка для слайдера"/>
     <? /*foreach ($articles as $article): ?>
         <h2><?php echo $article->title1; ?></h2>

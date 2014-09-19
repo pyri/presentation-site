@@ -34,7 +34,7 @@
         </div>
 
         <div id="main">
-            <aside class="sidebar-right border">
+            <aside id="sidebar-right">
                 <img src="../img/frame.png" alt="Фоторамка для таблицы"/>
                 <!--<ul>
                     <li class="partition-dashed"><a href="/">Главная</a></li>
