@@ -1,0 +1,119 @@
+@grey-header: #BBB;
+
+body {
+  background-color: #add8ed;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+p {
+  margin: 0;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+#wrapper {
+  width: 948px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+#main{
+  margin-top: 36px;
+}
+/*HEADER*/
+
+header {
+  height: 101px;
+}
+
+.logo {
+  height: 44px;
+  width: 213px;
+  float: left;
+  margin-left: 3px;
+  overflow: hidden;
+  padding-top: 17px;
+}
+
+.dotted_line{
+  margin-top: 24px;
+  margin-left: 28px;
+  float: left;
+}
+
+.slogan {
+  margin-left: 30px;
+  color: @grey-header;
+  font: bold 14px Arial;
+  margin-top: 32px;
+  float: left;
+}
+
+.auth {
+  margin-right: 23px;
+  color: @grey-header;
+  font: bold 14px Regular;
+  margin-top: 30px;
+  float: right;
+}
+
+/*MAIN MENU*/
+#mainmenu{
+  height: 53px;
+
+  ul{
+    height: 100%;
+
+    li{
+      width: 131px;
+      height: 38px;
+      margin-left: 5px;
+      padding-top: 15px;
+      float: left;
+      text-align: center;
+      border-radius: 7px;
+      background: linear-gradient(to bottom, #F6F6F6, #D6D6D6);
+      font: 18px Arial;
+    }
+
+    li:first-child{
+      margin-left: 0;
+    }
+
+    .active_li{
+      background: #3366CC;
+    }
+
+    li a{
+      color: #666;
+      text-decoration: none;
+    }
+
+    li .active_a{
+      color: #FFFEFE;
+      text-decoration: none;
+    }
+  }
+}
+.active{
+  color: #FFFEFE;
+  background-color: #3366CC;
+}
+
+/**/
+/*SIDEBAR RIGHT*/
+/*FOOTER*/
