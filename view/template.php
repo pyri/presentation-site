@@ -27,41 +27,63 @@
 
         <div id="mainmenu">
             <ul>
-                <li class="active_li"><a href="#" class="active_a">Главная</a></li>
-                <li><a href="#">Обо мне</a></li>
-                <li><a href="#">Комментарии</a></li>
+                <a href="#" class="active_a"><li class="active_li">Главная</li></a>
+                <a href="#"><li>Обо мне</li></a>
+                <a href="#"><li>Комментарии</li></a>
             </ul>
         </div>
 
         <div id="main">
             <aside id="sidebar-right">
-                <img src="../img/frame.png" alt="Фоторамка для таблицы"/>
-                <!--<ul>
-                    <li class="partition-dashed"><a href="/">Главная</a></li>
-                    <li class="partition-dashed"><a href="/?page=about_me">Обо мне</a></li>
-                    <li><a href="/?page=comment">Комментарии</a></li>
-                </ul>-->
+                <!--<img src="../img/frame.png" alt="Фоторамка для таблицы"/>-->
+                <table>
+                    <tr>
+                        <td>EUR/USD</td><td>1.3223</td>
+                    </tr>
+                    <tr>
+                        <td>GBR/USD</td><td>9.354</td>
+                    </tr>
+                    <tr>
+                        <td>USD/JPY</td><td>0.95862</td>
+                    </tr>
+                    <tr>
+                        <td>USD/CHF</td><td>14.7849</td>
+                    </tr>
+                    <tr>
+                        <td>AUD/USD</td><td>1.3223</td>
+                    </tr>
+                    <tr>
+                        <td>USD/CAD</td><td>9.354</td>
+                    </tr>
+                    <tr>
+                        <td>NZD/USD</td><td>0.95862</td>
+                    </tr>
+                    <tr>
+                        <td>EUR/JPY</td><td>9.354</td>
+                    </tr>
+                    <tr>
+                        <td>USD/RUB</td><td>51.58573</td>
+                    </tr>
+                    <tr>
+                        <td>EUR/RUB</td><td>1.1</td>
+                    </tr>
+                </table>
             </aside>
 
             <?php Route::renderContent(); ?>
         </div>
 
-        <footer>
-            это три  ul :)
+        <div class="buffer"></div>
 
+        <footer>
             <ul>
-                <li>О компании</li>
-                <li>На сегодняшний день...</li>
-            </ul>
-            <ul>
+                <li>Инвестору</li>
+                <!--<li>Условия</li>
+                <li>Соглашения</li>
+                <li>Тех. Поддержка</li>
                 <li>Новости</li>
-                <li>На сегодняшний день...</li>
+                <li>Контакты</li>-->
             </ul>
-            <ul>
-                <li>Проценты на сегодня</li>
-                <li>На сегодняшний день...</li>
-            </ul>
-            <input type="button" name="next" value="Далее"/>
         </footer>
     </div>
 <script src="http://code.jquery.com/jquery-2.1.1.js"></script>

@@ -1,7 +1,7 @@
 ﻿<?php $person = Model::readPersonInfo();
 $work = Model::readWork(); ?>
 
-<div class="content border">
+<div id="content border">
 
     <?php foreach ($person as $item): ?>
         <h2 id="padding-more"><?php echo $item->full_name; ?></h2>

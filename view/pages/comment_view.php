@@ -3,7 +3,7 @@
     $countComments = Model::countComments();
 ?>
 
-<div class="content border">
+<div id="content">
     <div>
         <p class="error_block"></p>
     </div>

@@ -1,3 +1,9 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 body {
   background-color: #add8ed;
 }
@@ -19,15 +25,23 @@ p {
   visibility: hidden;
 }
 #wrapper {
-  width: 948px;
+  width: 1240px;
   margin: 0 auto;
   background-color: #fff;
+  min-height: 100%;
+  margin-bottom: -50px;
 }
 #main {
+  width: 948px;
+  margin-left: 124px;
+  margin-right: 168px;
   margin-top: 36px;
 }
 /*HEADER*/
 header {
+  width: 948px;
+  margin-left: 124px;
+  margin-right: 168px;
   height: 101px;
 }
 .logo {
@@ -59,15 +73,22 @@ header {
 }
 /*MAIN MENU*/
 #mainmenu {
+  width: 948px;
+  margin-left: 124px;
+  margin-right: 168px;
   height: 53px;
 }
 #mainmenu ul {
   height: 100%;
 }
-#mainmenu ul li {
+#mainmenu ul a {
+  color: #666;
+  text-decoration: none;
+}
+#mainmenu ul a li {
   width: 131px;
-  height: 38px;
   margin-left: 5px;
+  height: 38px;
   padding-top: 15px;
   float: left;
   text-align: center;
@@ -75,23 +96,140 @@ header {
   background: linear-gradient(to bottom, #f6f6f6, #d6d6d6);
   font: 18px Arial;
 }
-#mainmenu ul li:first-child {
-  margin-left: 0;
-}
-#mainmenu ul .active_li {
+#mainmenu ul a .active_li {
   background: #3366CC;
 }
-#mainmenu ul li a {
-  color: #666;
-  text-decoration: none;
-}
-#mainmenu ul li .active_a {
+#mainmenu ul .active_a {
   color: #FFFEFE;
   text-decoration: none;
 }
-/*CONTENT*/
+#mainmenu ul a:first-child li {
+  margin-left: 0;
+}
+/*SLIDER*/
+#slider {
+  background: url(../img/slider.png);
+  width: 635px;
+  height: 375px;
+  float: left;
+}
+#slider div {
+  /* position: relative;
+    z-index: 1;*/
+}
+#slider div p {
+  color: #fff;
+  text-align: left;
+  font: 30px Myriad Pro;
+}
+.team {
+  width: 157px;
+  margin: 41px 0 0 413px;
+  /* height: 0;
+  z-index: 1;
+   top: -339px;
+   left: -87px;*/
+}
+.next_image {
+  margin: 210px 0 0 536px;
+  /*  height: 0;
+  top: -55px;
+    left: 33px;*/
+}
 /*SIDEBAR RIGHT*/
 #sidebar-right {
   float: right;
+  width: 303px;
+  height: 375px;
+  background: url(../img/frame.png);
+}
+#sidebar-right table {
+  width: 263px;
+  height: 284px;
+  margin-top: 71px;
+  margin-left: 20px;
+  /*position: absolute;
+    z-index: 1;
+    top: 308px;
+    left: 20px;*/
+}
+#sidebar-right table td {
+  border: 1px solid #45B0FE;
+  font: 18px Arial;
+  text-align: center;
+}
+/*CONTENT*/
+#content {
+  clear: both;
+  padding-top: 27px;
+}
+#content div ul {
+  margin-left: 19px;
+  float: left;
+}
+#content div ul:first-child {
+  margin-left: 0;
+}
+#content .next {
+  margin-top: 10px;
+  padding: 10px 0px 7px 0px;
+  border-radius: 10px;
+  text-decoration: none;
+  font: 14px Arial;
+  color: #666666;
+  background: linear-gradient(to bottom, #f5f5f5, #d9d9d9);
+  text-align: center;
+  width: 70px;
+  display: block;
+}
+.article {
+  margin-top: 9px;
+  width: 302px;
+  font: 12px Arial;
+  line-height: 1.3;
+}
+.imgcomment {
+  width: 235px;
+  float: right;
+  padding-top: 7px;
+  padding-right: 7px;
+}
+.article_title {
+  font: 18px Arial;
+}
+.article_first {
+  background: url(../img/solid_line.png) no-repeat;
+  padding-top: 20px;
+}
+.about_company .article_first {
+  padding-top: 20px;
+}
+.about_company .article_notfirst {
+  margin-top: 18px;
+}
+.news .article_first {
+  padding-top: 21px;
+}
+.news .article_notfirst {
+  margin-top: 15px;
+}
+.persents .article_first {
+  padding-top: 22px;
+}
+.persents .article_notfirst {
+  margin-top: 14px;
+}
+.a_reg {
+  color: #3366CC;
+}
+.bold {
+  font-weight: bold;
 }
 /*FOOTER*/
+.buffer {
+  height: 30px;
+}
+footer {
+  background: url(../img/footer_line) #eeeeee;
+  height: 85px;
+}
