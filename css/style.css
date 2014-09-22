@@ -3,12 +3,8 @@
   padding: 0;
 }
 html,
-body,
-#wrapper {
-  height: 100%;
-}
 body {
-  background-color: #add8ed;
+  height: 100%;
 }
 ul {
   margin: 0;
@@ -29,19 +25,16 @@ p {
 }
 #wrapper {
   background-color: #fff;
+  min-height: 100%;
+  position: relative;
 }
 #container {
   width: 940px;
   margin: 0 auto;
-  min-height: 100%;
-  margin-bottom: -85px;
 }
 #main {
   width: 948px;
   margin-top: 36px;
-}
-.buffer {
-  height: 95px;
 }
 /*HEADER*/
 header {
@@ -86,27 +79,27 @@ header {
 #mainmenu ul {
   height: 100%;
 }
-#mainmenu ul a {
-  color: #666;
-  text-decoration: none;
-}
-#mainmenu ul a li {
-  width: 131px;
+#mainmenu ul li {
   margin-left: 5px;
-  height: 38px;
-  padding-top: 15px;
   float: left;
   text-align: center;
-  border-radius: 7px;
-  background: linear-gradient(to bottom, #f6f6f6, #d6d6d6);
-  font: 18px Arial;
 }
-#mainmenu ul a .active {
+#mainmenu ul li a {
+  color: #666;
+  text-decoration: none;
+  width: 131px;
+  border-radius: 7px;
+  font: 18px Arial;
+  background: linear-gradient(to bottom, #f6f6f6, #d6d6d6);
+  display: block;
+  line-height: 53px;
+}
+#mainmenu ul li .active {
   background: #3366CC;
   color: #FFFEFE;
   text-decoration: none;
 }
-#mainmenu ul a:first-child li {
+#mainmenu ul li:first-child {
   margin-left: 0;
 }
 /*SLIDER*/
@@ -151,12 +144,16 @@ header {
   clear: both;
   padding-top: 27px;
 }
-.content div ul {
+.content div .article_block {
   margin-left: 19px;
   float: left;
 }
-.content div ul:first-child {
+.content div .article_block:first-child {
   margin-left: 0;
+}
+.content div .article_block ul li:first-child {
+  background: url(../img/solid_line.png) no-repeat;
+  padding-top: 20px;
 }
 .content .next {
   margin-top: 10px;
@@ -181,6 +178,9 @@ header {
 .content .form {
   margin: 0 5px;
   width: 334px;
+}
+.content .form label {
+  cursor: pointer;
 }
 .content .form input {
   margin: 15px 0;
@@ -275,25 +275,22 @@ header {
   padding-right: 7px;
 }
 .article_title {
+  width: 302px;
   font: normal 18px Arial;
 }
-.article_first {
-  background: url(../img/solid_line.png) no-repeat;
-  padding-top: 20px;
-}
-.about_company .article_first {
+.about_company li:first-child {
   padding-top: 20px;
 }
 .about_company .article_notfirst {
   margin-top: 18px;
 }
-.news .article_first {
+.news li:first-child {
   padding-top: 21px;
 }
 .news .article_notfirst {
   margin-top: 15px;
 }
-.persents .article_first {
+.persents li:first-child {
   padding-top: 22px;
 }
 .persents .article_notfirst {
@@ -316,6 +313,10 @@ header {
 footer {
   background: url(../img/footer_line.png) repeat-x #eeeeee;
   height: 85px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 #footer_inner {
   width: 940px;

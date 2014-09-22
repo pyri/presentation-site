@@ -5,13 +5,12 @@
   padding: 0;
 }
 
-html, body, #wrapper {
+html, body{
   height: 100%;
 
 }
 
 body {
-  background-color: #add8ed;
 }
 
 ul {
@@ -37,23 +36,18 @@ p {
 
 #wrapper {
   background-color: #fff;
-
+  min-height: 100%;
+  position: relative;
 }
 
 #container {
   width: 940px;
   margin: 0 auto;
-  min-height: 100%;
-  margin-bottom: -85px;
 }
 
 #main {
   width: 948px;
   margin-top: 36px;
-}
-
-.buffer {
-  height: 95px;
 }
 
 /*HEADER*/
@@ -106,31 +100,36 @@ header {
   ul {
     height: 100%;
 
-    a {
-      color: #666;
-      text-decoration: none;
+    li {
+      margin-left: 5px;
+      float: left;
+      text-align: center;
 
-      li {
+      a {
+        color: #666;
+        text-decoration: none;
         width: 131px;
-        margin-left: 5px;
-        height: 38px;
-        padding-top: 15px;
-        float: left;
-        text-align: center;
         border-radius: 7px;
-        background: linear-gradient(to bottom, #F6F6F6, #D6D6D6);
         font: 18px Arial;
+        background: linear-gradient(to bottom, #F6F6F6, #D6D6D6);
+        display: block;
+        line-height: 53px;
       }
+
       .active {
         background: #3366CC;
         color: #FFFEFE;
         text-decoration: none;
+
+      }
+
+      &:first-child  {
+        margin-left: 0;
       }
     }
 
-    a:first-child li {
-      margin-left: 0;
-    }
+
+
   }
 }
 
@@ -187,13 +186,18 @@ header {
   padding-top: 27px;
 
   div {
-    ul {
+    .article_block {
       margin-left: 19px;
       float: left;
-    }
 
-    ul:first-child {
-      margin-left: 0;
+      &:first-child {
+        margin-left: 0;
+      }
+
+      ul li:first-child {
+        background: url(../img/solid_line.png) no-repeat;
+        padding-top: 20px;
+      }
     }
   }
 
@@ -210,14 +214,14 @@ header {
     display: block;
   }
 
-  table{
+  table {
 
-    th, td{
+    th, td {
       border: 1px solid #000;
       padding: 10px;
     }
 
-    th{
+    th {
 
       font: bold 17px Times New Roman;
     }
@@ -226,6 +230,10 @@ header {
   .form {
     margin: 0 5px;
     width: 334px;
+
+    label {
+      cursor: pointer;
+    }
 
     input {
       margin: 15px 0;
@@ -306,7 +314,7 @@ header {
       line-height: 30px;
     }
 
-    .msg-pagenumber{
+    .msg-pagenumber {
       width: 22px;
       height: 20px;
       margin: 0 0 5px 5px;
@@ -317,7 +325,7 @@ header {
       float: right;
       text-decoration: none;
 
-      &:hover{
+      &:hover {
         color: #3366CC;
       }
     }
@@ -339,16 +347,13 @@ header {
 }
 
 .article_title {
+  width: 302px;
   font: normal 18px Arial;
-}
 
-.article_first {
-  background: url(../img/solid_line.png) no-repeat;
-  padding-top: 20px;
 }
 
 .about_company {
-  .article_first {
+  li:first-child {
     padding-top: 20px;
   }
 
@@ -358,7 +363,7 @@ header {
 }
 
 .news {
-  .article_first {
+  li:first-child {
     padding-top: 21px;
   }
 
@@ -368,7 +373,7 @@ header {
 }
 
 .persents {
-  .article_first {
+  li:first-child {
     padding-top: 22px;
   }
 
@@ -385,11 +390,12 @@ header {
   font-weight: bold;
 }
 
-.heading{
+.heading {
   text-align: center;
   color: #3366CC;
 }
-.story{
+
+.story {
   margin: 20px 0;
 }
 
@@ -397,6 +403,10 @@ header {
 footer {
   background: url(../img/footer_line.png) repeat-x #EEEEEE;
   height: 85px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 #footer_inner {

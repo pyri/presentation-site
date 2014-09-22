@@ -9,9 +9,9 @@
 <body>
     <div id="wrapper">
         <div id="container">
-            <header>
+            <header class="clearfix">
                 <div class="logo">
-                    <img src="../img/logo.png" alt="Логотип"/>
+                    <a href="/"><img src="../img/logo.png" alt="Логотип"/></a>
                 </div>
 
                 <div class="dotted_line">
@@ -22,23 +22,23 @@
                 </div>
 
                 <div class="auth">
-                    <a href="#">Авторизация / Регистрация</a>
+                    <a href="#">Авторизация / </a>
+                    <a href="#">Регистрация</a>
                 </div>
             </header>
 
             <div id="mainmenu">
                 <ul>
-                    <a href="/"><li class="<?php active(''); ?>">Главная</li></a>
-                    <a href="/?page=about_me"><li class="<?php active('about_me'); ?>">Обо мне</li></a>
-                    <a href="/?page=comment"><li class="<?php active('comment'); ?>">Комментарии</li></a>
+                    <li><a href="/" class="<?php active(''); ?>">Главная</a></li>
+                    <li><a href="/?page=about_me" class="<?php active('about_me'); ?>">Обо мне</a></li>
+                    <li><a href="/?page=comment" class="<?php active('comment'); ?>">Комментарии</a></li>
                 </ul>
             </div>
 
             <div id="main">
                 <?php Route::renderContent(); ?>
-            </div><div class="buffer"></div>
+            </div>
         </div>
-
         <footer>
             <div id="footer_inner">
                 <ul>
