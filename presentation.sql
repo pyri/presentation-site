@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Сен 15 2014 г., 11:55
+-- Время создания: Сен 22 2014 г., 13:34
 -- Версия сервера: 5.5.35-log
 -- Версия PHP: 5.3.27
 
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `comments` (
   `text` text NOT NULL,
   `data` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=124 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=236 ;
 
 --
 -- Дамп данных таблицы `comments`
@@ -75,31 +75,10 @@ INSERT INTO `comments` (`id`, `name`, `mail`, `text`, `data`) VALUES
 (77, 'Кира', 'kira@gmail.com', 'Отличный фон!', '2014-09-13'),
 (78, 'Евгений', 'jeka@mail.ru', 'Есть вопрос..', '2014-09-13'),
 (79, 'Дарья', 'darya@ya.ru', 'Как дела?', '2014-09-13'),
-(120, 'jlkjk', 'jkljk@gdf.rt', 'ljkljkl', '2014-09-15'),
-(121, 'ghjgj', 'ghj@fsr.rt', 'gjghj', '2014-09-15'),
-(122, 'tu', 'tyu@fd.tr', 'utyu', '2014-09-15'),
-(123, 'hjgj', 'gjghj@gsdfg.rt', 'bnmbnm', '2014-09-15');
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `main`
---
-
-CREATE TABLE IF NOT EXISTS `main` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title1` varchar(100) NOT NULL,
-  `title2` varchar(100) NOT NULL,
-  `article` text NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
-
---
--- Дамп данных таблицы `main`
---
-
-INSERT INTO `main` (`id`, `title1`, `title2`, `article`) VALUES
-(1, 'Тестовое задание', 'Просто текст-рыбка в качестве примера', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dolores saepe iure esse omnis autem, debitis eos, repudiandae iusto eaque ullam repellat possimus est blanditiis minima accusantium distinctio sint earum.\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dolores saepe iure esse omnis autem, debitis eos, repudiandae iusto eaque ullam repellat possimus est blanditiis minima accusantium distinctio sint earum.</p>\r\n<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam dolores saepe iure esse omnis autem, debitis eos, repudiandae iusto eaque ullam repellat possimus est blanditiis minima accusantium distinctio sint earum.</p>');
+(232, 'y', 'tyry@fsd.rt', 'jkl', '2014-09-22'),
+(233, 'tyry@fsd.rt', 'tyry@fsd.rt', 'tyry@fsd.rt', '2014-09-22'),
+(234, 'http:||kokostest.lan|', 'lan@sdfsd.rt', 'http:||kokostest.lan|', '2014-09-22'),
+(235, 'tyy', 'rty@sg.yu', 'yry', '2014-09-22');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

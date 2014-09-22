@@ -26,10 +26,10 @@ $(document).ready(function () {
             }
             else {
                 var comment = $("#comment");
-                var html = '<div class="msg border">' +
-                    '<p class="inline-right partition-dashed">' + result.date + "</p>" +
-                    '<p class="inline-left partition-dashed">' + result.author + ' (' + result.mail + ')' + "</p>" +
-                    '<p class="msg-text inflow-left font-green">' + result.text + "</p>" +
+                var html = '<div class="msg">' +
+                    '<p class="msg_data">' + result.date + "</p>" +
+                    '<p class="msg_name">' + result.author + ' (' + result.mail + ')' + "</p>" +
+                    '<p class="msg_text">' + result.text + "</p>" +
                     '</div>';
                 comment.prepend(html);
                 $('.msg:gt(2)').slideUp(2000);

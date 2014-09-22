@@ -1,28 +1,48 @@
-﻿<?php $articles = Model::readMainPage(); ?>
+﻿<aside id="sidebar-right">
+    <table>
+        <tr>
+            <td>EUR/USD</td><td>1.3223</td>
+        </tr>
+        <tr>
+            <td>GBR/USD</td><td>9.354</td>
+        </tr>
+        <tr>
+            <td>USD/JPY</td><td>0.95862</td>
+        </tr>
+        <tr>
+            <td>USD/CHF</td><td>14.7849</td>
+        </tr>
+        <tr>
+            <td>AUD/USD</td><td>1.3223</td>
+        </tr>
+        <tr>
+            <td>USD/CAD</td><td>9.354</td>
+        </tr>
+        <tr>
+            <td>NZD/USD</td><td>0.95862</td>
+        </tr>
+        <tr>
+            <td>EUR/JPY</td><td>9.354</td>
+        </tr>
+        <tr>
+            <td>USD/RUB</td><td>51.58573</td>
+        </tr>
+        <tr>
+            <td>EUR/RUB</td><td>1.1</td>
+        </tr>
+    </table>
+</aside>
+
 <div id="slider">
-    <!--<img src="../img/slider.png" alt="Картинка для слайдера"/>-->
     <div class="team">
         <p>Заработок с</p><p>Ufinance</p>
     </div>
-    <div class="next_image">
-        <img src="../img/nextleft.png" alt="Листание влево"/>
-        <img src="../img/nextright.png" alt="Листание вправо"/>
-    </div>
-
-    <? /*foreach ($articles as $article): ?>
-        <h2><?php echo $article->title1; ?></h2>
-        <h3><?php echo $article->title2; ?></h3>
-        <p>
-            <?php echo $article->article; ?>
-        </p>
-    <? endforeach; */?>
 </div>
 
-<div id="content">
+<div class="content">
     <div class="clearfix">
         <ul class="about_company">
             <li class="article_title">О компании</li>
-           <!-- <li><img src="../img/solid_line.png" alt=""/></li>-->
             <li class="article article_first">На сегодняшний день "Ufinance" - одна из ведущих компаний, предлагающих форекс- трейдинг.</li>
             <li class="article article_notfirst">Безупречная репутация, клиентоориентированность и инновационный подход к развитию бизнеса позволили компании твердо занять свою нишу.</li>
             <li class="article article_notfirst">Брокерская компания "Ufinance" специализируется на предоставлении услуг в сфере интернет-трейдинга и инвестиций.</li>
